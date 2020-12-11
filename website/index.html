@@ -6,10 +6,17 @@
         <link rel="stylesheet" href="css/styles.css" />
         <title>Project: Weather App</title>
         <meta name="description" content="Landing Page" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Prata&display=swap" rel="stylesheet">
     </head>
     <body>
-        <input type="text" id="city"><br><br>
-        <button id="generate">TEST BUTTON</button>
+        <div id="form">
+            <h1>WEATHER JOURNAL APPLICATION</h1>
+            <input type="text" id="zip" placeholder="Enter Zip Code Here"><br><br>
+            <textarea id="feelings" placeholder="How are you feeling today?"></textarea><br><br>
+            <button id="generate">ADD THIS ENTRY INTO YOUR JOURNAL!</button>
+        </div>
+        <div id="entryHolder"></div>
     </body>
     <script src="js/app.js"></script>
 </html>
