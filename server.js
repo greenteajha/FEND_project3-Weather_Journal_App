@@ -25,7 +25,16 @@ function listening(){
     console.log(`Server is up! Server is running on localhost: ${port}`);
 }
 
-app.get("/", function(req, res){
-    console.log(req);
-    res.send("Hello World");
-})
+// Endpoint
+const projectData = [];
+
+// GET Route
+app.get('/all', function(request, response) {
+    console.log("HELLO");
+});
+
+// POST Route
+app.post('/all', function(req, res){
+    projectData.push(req.body);
+    console.log(projectData);
+});
