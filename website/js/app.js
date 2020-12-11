@@ -23,7 +23,7 @@ const getWeather = async (baseURL, cityName, key)=>{
 }*/
 
 const postData = async ( url = '', data = {})=>{
-    console.log(data);
+
       const response = await fetch(url, {
       method: 'POST', 
       credentials: 'same-origin',
@@ -44,4 +44,4 @@ const postData = async ( url = '', data = {})=>{
   }
 
 postData('/', {answer:42});
-//postData('/', {happy:22});
+postData('/', {happy:22});
