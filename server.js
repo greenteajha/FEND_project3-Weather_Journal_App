@@ -29,12 +29,12 @@ function listening(){
 const projectData = [];
 
 // GET Route
-app.get('/all', function(request, response) {
-    console.log("HELLO");
-});
+app.get('/', function (req, res) {
+    res.send('hello world');
+  })
 
 // POST Route
-app.post('/all', function(req, res){
+app.post('/', function(req, res){
     projectData.push(req.body);
-    console.log(projectData);
+    res.send('abc');
 });
