@@ -29,12 +29,20 @@ function listening(){
 const projectData = [];
 
 // GET Route
-app.get('/', function(req, res){
+app.get('/add', function(req, res){
     res.send(projectData);
-    console.log("HELLO");
 })
 
 // POST Route
-app.post('/', function(req, res){
-    projectData.push(req.body);
-});
+app.post('/addData', addTemperature);
+
+function addTemperature(req,res){
+
+    //console.log(req.body);
+    newEntry = {
+        temperature: req.body.temperature
+    }
+
+    projectData.push(newEntry);
+    console.log(projectData);
+}
